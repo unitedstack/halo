@@ -1,6 +1,6 @@
 {
   "name": "@ustack/halo-server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ustack web framework",
   "dependencies": {
     "bcrypt": "^2.0.1",
@@ -8,6 +8,7 @@
     "egg": "^2.8.1",
     "egg-i18n": "^2.0.0",
     "egg-onerror": "^2.0.0",
+    "egg-scripts": "^2.6.0",
     "egg-sequelize": "^3.1.4",
     "egg-session": "^3.1.0",
     "egg-static": "^2.1.1",
