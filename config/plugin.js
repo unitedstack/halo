@@ -16,4 +16,8 @@ module.exports = {
   i18n: {
     enable: true,
   },
+  ue: {
+    enable: true,
+    package: '@ustack/egg-ue',
+  },
 };
