@@ -1,5 +1,5 @@
 {
-  "name": "@ustack/halo-server",
+  "name": "@ustack/halo",
   "version": "0.0.6",
   "description": "ustack web framework",
   "dependencies": {
