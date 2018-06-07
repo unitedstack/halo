@@ -11,6 +11,11 @@ module.exports = appInfo => {
   config.test = {
     key: appInfo.name + '_123456',
   };
+  config.httpclient = {
+    request: {
+      timeout: [ 10000, 50000 ],
+    },
+  };
 
   return config;
 };
