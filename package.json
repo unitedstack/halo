@@ -1,6 +1,6 @@
 {
   "name": "@ustack/halo",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ustack web framework",
   "dependencies": {
     "@ustack/egg-ue": "0.0.1",

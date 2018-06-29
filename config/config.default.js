@@ -13,7 +13,7 @@ module.exports = appInfo => {
   };
   config.httpclient = {
     request: {
-      timeout: [ 10000, 50000 ],
+      timeout: [ 30000, 600000 ],
     },
   };
 
