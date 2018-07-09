@@ -1,19 +1,17 @@
 'use strict';
 
-module.exports = appInfo => {
-  const config = {};
+const { readFileSync } = require('fs');
+const { join } = require('path');
 
-  /**
-   * some description
-   * @member Config#test
-   * @property {String} key - some description
-   */
-  config.test = {
-    key: appInfo.name + '_123456',
-  };
-  config.httpclient = {
-    request: {
-      timeout: [ 30000, 600000 ],
+module.exports = () => {
+  const config = {
+    siteFile: {
+      '/favicon.ico': readFileSync(join(__dirname, 'favicon.png')),
+    },
+    httpclient: {
+      request: {
+        timeout: [ 30000, 600000 ],
+      },
     },
   };
 

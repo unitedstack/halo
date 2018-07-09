@@ -1,26 +1,51 @@
 # halo
 
-ustack web framework
+ustack web framework extends egg
 
-## QuickStart
+## Usage
 
 ```bash
-$ npm install
-$ npm test
+npm i -S @ustack/halo
 ```
 
-publish your framework to npm, then change app's dependencies:
-
-```js
-// {app_root}/index.js
-require('halo').startCluster({
-  baseDir: __dirname,
-  // port: 7001, // default to 7001
-});
-
+```file
+# package.json
+"egg": {
+  "framework": "@ustack/halo"
+}
 ```
+
+## 插件
+
+### 继承自egg的插件
+
++ onerror
++ session
++ i18n
++ watcher
++ multipart
++ security
++ development
++ logrotator
++ schedule
++ static
++ view
++ jsonp
+
+## 中间件
+
+### egg的中间件
+
++ meta
++ siteFile
++ notfound
++ bodyParser
++ overrideMethod
+
+## bin
+
+``./node_modules/.bin/halo``
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
-
+Please open an issue [here](https://github.com/unitedstack/halo/issues).
