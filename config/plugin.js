@@ -20,4 +20,8 @@ module.exports = {
     enable: true,
     package: '@ustack/egg-ue',
   },
+  io: {
+    enable: false,
+    package: 'egg-socket.io',
+  },
 };
