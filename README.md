@@ -17,7 +17,65 @@ npm i -S @ustack/halo
 
 ## 插件
 
-### 继承自egg的插件
+### 清单
+| 名称 | node_modules | enable |
+| --- | --- | --- |
+| ejs | egg-view-ejs | true |
+| sequelize | egg-sequelize | false |
+| ue | @ustack/egg-ue | true |
+| io | egg-socket.io | false |
+
+## 默认配置
+```js
+// plugin.js
+module.exports = {
+  ejs: {
+    enable: true,
+    package: 'egg-view-ejs',
+  },
+  sequelize: {
+    enable: false,
+    package: 'egg-sequelize',
+  },
+  ue: {
+    enable: true,
+    package: '@ustack/egg-ue',
+  },
+  io: {
+    enable: false,
+    package: 'egg-socket.io',
+  },
+};
+
+// config.default.js
+module.exports = () => ({
+  siteFile: {
+    '/favicon.ico': readFileSync(join(__dirname, 'favicon.png')),
+  },
+  httpclient: {
+    request: {
+      timeout: [ 30000, 600000 ],
+    },
+  },
+  io: {
+    namespace: {
+      '/': {
+        connectionMiddleware: [],
+        packetMiddleware: [],
+      },
+    },
+    redis: {
+      host: '127.0.0.1',
+      port: 6379,
+      auth_pass: '',
+      db: 0,
+    },
+  },
+});
+```
+
+## 继承自egg
+### 插件
 
 + onerror
 + session
@@ -32,9 +90,7 @@ npm i -S @ustack/halo
 + view
 + jsonp
 
-## 中间件
-
-### egg的中间件
+### 中间件
 
 + meta
 + siteFile
@@ -42,10 +98,11 @@ npm i -S @ustack/halo
 + bodyParser
 + overrideMethod
 
-## bin
-
-``./node_modules/.bin/halo``
 
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/unitedstack/halo/issues).
+
+>参考
+
+## @ustack/egg-ue

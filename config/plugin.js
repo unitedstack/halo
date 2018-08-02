@@ -10,12 +10,6 @@ module.exports = {
     enable: false,
     package: 'egg-sequelize',
   },
-  session: {
-    enable: true,
-  },
-  i18n: {
-    enable: true,
-  },
   ue: {
     enable: true,
     package: '@ustack/egg-ue',
