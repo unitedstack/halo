@@ -1,9 +1,9 @@
 {
   "name": "@ustack/halo",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "ustack web framework",
   "dependencies": {
-    "@ustack/egg-ue": "^0.2.1",
+    "@ustack/egg-ue": "^0.3.0",
     "egg": "^2.9.1",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^3.1.4",
