@@ -18,4 +18,12 @@ module.exports = {
     enable: false,
     package: 'egg-socket.io',
   },
+  redis: {
+    enable: false,
+    package: 'egg-redis',
+  },
+  sessionRedis: {
+    enable: false,
+    package: 'egg-session-redis',
+  },
 };
