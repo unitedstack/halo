@@ -50,7 +50,6 @@
   "files": [
     "index.js",
     "lib",
-    "app",
     "config"
   ],
   "eslintIgnore": [

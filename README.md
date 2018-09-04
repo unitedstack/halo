@@ -24,6 +24,8 @@ npm i -S @ustack/halo
 | sequelize | egg-sequelize | false |
 | ue | @ustack/egg-ue | true |
 | io | egg-socket.io | false |
+| redis | egg-redis | false |
+| sessionRedis | egg-session-redis | false | 
 
 ## 默认配置
 ```js
@@ -45,33 +47,53 @@ module.exports = {
     enable: false,
     package: 'egg-socket.io',
   },
+  redis: {
+    enable: false,
+    package: 'egg-redis',
+  },
+  sessionRedis: {
+    enable: false,
+    package: 'egg-session-redis',
+  },
 };
 
 // config.default.js
-module.exports = () => ({
-  siteFile: {
-    '/favicon.ico': readFileSync(join(__dirname, 'favicon.png')),
-  },
-  httpclient: {
-    request: {
-      timeout: [ 30000, 600000 ],
+module.exports = () => {
+  const config = {
+    siteFile: {
+      '/favicon.ico': readFileSync(join(__dirname, 'favicon.png')),
     },
-  },
-  io: {
-    namespace: {
-      '/': {
-        connectionMiddleware: [],
-        packetMiddleware: [],
+    httpclient: {
+      request: {
+        timeout: [ 30000, 600000 ],
+      },
+    },
+    io: {
+      namespace: {
+        '/': {
+          connectionMiddleware: [],
+          packetMiddleware: [],
+        },
+      },
+      redis: {
+        host: '127.0.0.1',
+        port: 6379,
+        auth_pass: '',
+        db: 0,
       },
     },
     redis: {
-      host: '127.0.0.1',
-      port: 6379,
-      auth_pass: '',
-      db: 0,
+      client: {
+        host: '127.0.0.1',
+        port: 6379,
+        password: '',
+        db: 0,
+      },
     },
-  },
-});
+  };
+
+  return config;
+};
 ```
 
 ## 继承自egg
