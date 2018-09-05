@@ -1,9 +1,9 @@
 {
   "name": "@ustack/halo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ustack web framework",
   "dependencies": {
-    "@ustack/egg-ue": "^0.3.0",
+    "@ustack/egg-ue": "^0.4.0",
     "egg": "^2.9.1",
     "egg-redis": "^2.0.0",
     "egg-scripts": "^2.6.0",
