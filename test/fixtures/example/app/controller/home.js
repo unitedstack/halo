@@ -7,6 +7,12 @@ class HomeController extends Controller {
     const data = await this.service.test.get(123);
     this.ctx.body = data.name;
   }
+
+  async redis() {
+    const { ctx, app } = this;
+    await app.redis.set('foo', 'bar');
+    ctx.body = await app.redis.get('foo');
+  }
 }
 
 module.exports = HomeController;
