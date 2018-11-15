@@ -1,5 +1,5 @@
 'use strict';
-
+const path = require('path');
 // add you build-in plugin here, example:
 module.exports = {
   ejs: {
@@ -20,7 +20,7 @@ module.exports = {
   },
   redis: {
     enable: false,
-    package: 'egg-redis',
+    path: path.join(__dirname, '../lib/egg-redis'),
   },
   sessionRedis: {
     enable: false,

@@ -5,7 +5,7 @@
   "dependencies": {
     "@ustack/egg-ue": "^0.4.0",
     "egg": "^2.9.1",
-    "egg-redis": "^2.0.0",
+    "ioredis": "^3.2.2",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^4.1.0",
     "egg-session-redis": "^2.0.1",
