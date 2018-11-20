@@ -16,7 +16,7 @@ module.exports = {
   },
   io: {
     enable: false,
-    package: 'egg-socket.io',
+    path: path.join(__dirname, '../lib/egg-socket.io'),
   },
   redis: {
     enable: false,
