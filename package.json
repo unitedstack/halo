@@ -19,7 +19,6 @@
     "mysql2": "^1.5.3"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
     "egg-bin": "^4.4.0",
@@ -28,7 +27,8 @@
     "eslint": "^4.18.0",
     "eslint-config-egg": "^7.0.0",
     "mocha": "^5.1.1",
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.1.1",
+    "assert": "^1.4.1"
   },
   "engines": {
     "node": ">=8.0.0"
