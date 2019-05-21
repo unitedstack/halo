@@ -20,7 +20,7 @@ module.exports = {
   },
   redis: {
     enable: false,
-    path: path.join(__dirname, '../lib/egg-redis'),
+    package: 'egg-redis',
   },
   sessionRedis: {
     enable: false,

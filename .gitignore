@@ -5,5 +5,4 @@ coverage/
 run/
 .DS_Store
 *.swp
-package-lock.json
 
